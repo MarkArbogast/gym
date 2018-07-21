@@ -19,7 +19,7 @@ if __name__ == '__main__':
 
     # You can set the level to logger.DEBUG or logger.WARN if you
     # want to change the amount of output.
-    logger.set_level(logger.INFO)
+    logger.set_level(logger.ERROR)
 
     env = gym.make(args.env_id)
 
@@ -48,4 +48,4 @@ if __name__ == '__main__':
             # Video is not recorded every episode, see capped_cubic_video_schedule for details.
 
     # Close the env and write monitor result info to disk
-    env.close()
+    env.env.close()
